@@ -1,0 +1,83 @@
+.navbar {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* 모바일 대응 */
+    gap: 10px;
+  }
+  
+  .login-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .nav-section img {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 300px; /* 최대 너비 지정 */
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  
+  .search-icon {
+    color: #888;
+    margin-right: 8px;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 14px;
+  }
+  
+  .menu-area {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .menu-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-list li {
+    font-size: 16px;
+    cursor: pointer;
+    color: #444;
+  }
+  
+  .menu-list li:hover {
+    text-decoration: underline;
+  }
+  
