@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductCard from '../component/ProductCard';
-import './ProductAll.css'; 
+import { Container, Row, Col } from 'react-bootstrap';
 
-const ProductAll = () => {
+const ProductAll = ({ searchQuery }) => {
   const [productList, setProductList] = useState([]);
 
   const getProducts = async () => {
     try {
-      let url = 'http://localhost:3001/products';
-      let response = await fetch(url);
-      let data = await response.json();
+      const url = "https://my-json-server.typicode.com/Kimmyoungsung/hnm-react-router-practice/products";
+      const response = await fetch(url);
+      const data = await response.json();
       setProductList(data);
     } catch (error) {
       console.error('JSON 파싱 실패 ❌:', error);
@@ -20,12 +20,20 @@ const ProductAll = () => {
     getProducts();
   }, []);
 
+  const filteredList = productList.filter(product =>
+    product.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
-    <div className="product-list">
-      {productList.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </div>
+    <Container>
+      <Row>
+        {filteredList.map(product => (
+          <Col key={product.id} lg={3} md={4} sm={6} xs={12}>
+            <ProductCard product={product} />
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 };
 
