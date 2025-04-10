@@ -1,37 +1,17 @@
-.login-container {
-    max-width: 350px;
-    margin: 80px auto;
-    padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .login-container h2 {
-    margin-bottom: 20px;
-  }
-  
-  .login-container input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  .login-container button {
-    padding: 10px 20px;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .login-container button:hover {
-    background-color: #555;
-  }
-  
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+}

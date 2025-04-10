@@ -1,59 +1,114 @@
-/* src/page/ProductDetail.css */
+/* 전체 레이아웃 */
+.product-detail-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 60px;
+  padding: 0 20px;
+}
 
-.product-detail-container {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    display: flex;
-    gap: 40px;
-  }
-  
-  .product-detail-image {
-    width: 50%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  
-  .product-detail-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .product-detail-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .product-detail-price {
-    font-size: 24px;
-    color: #e60023;
-    margin-bottom: 15px;
-  }
-  
-  .product-detail-description {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  .product-detail-badge {
-    background-color: green;
-    color: white;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
-  
-  .product-detail-new {
-    color: red;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  
+/* 왼쪽: 이미지 */
+.product-detail-left {
+  flex: 1;
+}
+
+.product-detail-image {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* 오른쪽: 정보 */
+.product-detail-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.product-detail-badge {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.product-detail-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.product-detail-price {
+  font-size: 1.5rem;
+  color: #e60023;
+  font-weight: 600;
+}
+
+.product-detail-new {
+  background-color: #ff5722;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width: fit-content;
+}
+
+.product-detail-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+/* 사이즈 선택 */
+.product-detail-size {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.product-detail-size label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.product-detail-size select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* 장바구니 버튼 */
+.add-to-cart-button {
+  margin-top: 30px;
+  padding: 14px;
+  background-color: #212529;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #000;
+}
+
+/* 로딩 스타일 */
+.loading {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 1.5rem;
+  color: #888;
+}
